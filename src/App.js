@@ -1,18 +1,16 @@
 import React from "react";
 
+import Header from "./components/Header/Header";
+import ApplicationForm from "./containers/ApplicationForm/ApplicationForm";
 import "./App.scss";
 
-import SelectBuyerType from "./containers/SelectBuyerType/SelectBuyerType";
-
-import Header from "./components/Header/Header";
-
-function App() {
+const App = () => {
   return (
     <div className="app">
       <Header />
-      <SelectBuyerType />
+      <ApplicationForm />
     </div>
   );
-}
+};
 
 export default App;
