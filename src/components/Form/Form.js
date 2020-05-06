@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 
 import "./Form.scss";
+// import ProductData, { productData } from "../../ProductData";
 
 import Input from "../Input/Input";
 
-const Form = () => {
-  const [applicantName, setApplciantName] = useState(undefined);
-  const [age, setAge] = useState(undefined);
-  const [loanAmount, setLoanAmount] = useState(undefined);
-  const [deposit, setDeposit] = useState(undefined);
-  const [annualSalary, setAnnualSalary] = useState(undefined);
-  const [purchaseValue, setPurchaseValue] = useState(undefined);
+const Form = ({ setOnFormSubmit }) => {
+  const [applicantName, setApplciantName] = useState("");
+  const [age, setAge] = useState(0);
+  const [loanAmount, setLoanAmount] = useState(0);
+  const [deposit, setDeposit] = useState(0);
+  const [annualSalary, setAnnualSalary] = useState(0);
+  const [purchaseValue, setPurchaseValue] = useState(0);
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    console.log("done");
+    setOnFormSubmit(true);
   };
 
   return (
@@ -50,7 +51,13 @@ const Form = () => {
         value={purchaseValue}
         setValue={setPurchaseValue}
       />
-      <input type="submit" value="Submit" />
+      <input
+        type="submit"
+        value="Submit"
+        // onClick={() => {
+        // if (age >= 18 && age < 65) return <p>{productData.id.$(1)}</p>;
+        // }}
+      />
     </form>
   );
 };
