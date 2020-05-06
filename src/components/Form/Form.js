@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "./Form.scss";
+
 import Input from "../Input/Input";
 
 const Form = () => {
@@ -18,32 +20,32 @@ const Form = () => {
   return (
     <form onSubmit={handleSubmit} className="application-form">
       <Input
-        label="Full Name"
+        label="Full Name:"
         type="text"
         value={applicantName}
         setValue={setApplciantName}
       />
-      <Input label="Age" type="number" value={age} setValue={setAge} />
+      <Input label="Age:" type="number" value={age} setValue={setAge} />
       <Input
-        label="Loan Amount"
+        label="Loan Amount:"
         type="number"
         value={loanAmount}
         setValue={setLoanAmount}
       />
       <Input
-        label="Deposit"
+        label="Deposit:"
         type="number"
         value={deposit}
         setValue={setDeposit}
       />
       <Input
-        label="Annual Salary"
+        label="Annual Salary:"
         type="number"
         value={annualSalary}
         setValue={setAnnualSalary}
       />
       <Input
-        label="Purchase Value"
+        label="Purchase Value:"
         type="number"
         value={purchaseValue}
         setValue={setPurchaseValue}

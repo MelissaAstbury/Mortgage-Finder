@@ -1,0 +1,25 @@
+.application-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+}
+
+input[type="text"] {
+  background-color: #8e8cb1;
+  color: white;
+  border: none;
+  border-bottom: 1px solid navy;
+  border-radius: 2px;
+  margin-bottom: 8px;
+  margin-left: 12px;
+}
+
+input[type="number"] {
+  background-color: #8e8cb1;
+  color: white;
+  border: none;
+  border-bottom: 1px solid navy;
+  border-radius: 2px;
+  margin-bottom: 8px;
+  margin-left: 12px;
+}
